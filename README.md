@@ -1,6 +1,5 @@
 # 💻 Núcleo Web
 
-
 Olá olá, galerinha! Bem vindos ao núcleo web! Aqui será o local de acesso as atividades deste ciclo. Primeiramente vocês terão que prepara o ambiente na sua máquina para começar a trabalhar.
 
 ### Criando uma branch
