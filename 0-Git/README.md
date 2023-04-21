@@ -9,7 +9,7 @@
 - Clone este repositório e crie uma branch própia para vocês (que futuramente servirá para o resto das atividades). O nome da sua branch deverá seguir o modelo "numero-da-sua-turma"-"seu-nome", por exemplo, se José for da turma 1 ele deve nomear sua branch de "1-jose".
 - Coloque o nome de vocês na lista.
 - Faça o commit na sua mudança.
-- Façam um pull para a main para evitar conflitos e se tiver tudo certo fazer um merge request no Gitlab. 
+- Façam um pull para a main para evitar conflitos e se tiver tudo certo fazer um merge request no gitlab. 
 
 ## Materiais de apoio
 
