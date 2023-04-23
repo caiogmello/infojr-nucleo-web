@@ -52,15 +52,15 @@ Os orientadores fecharão o MR quando a atividade estiver concluída, e poderão
 
 Lembre-se de que o núcleo é o seu treinamento para começar a trabalhar nos projetos da InfoJr. Portanto, tenha em mente que sua postura aqui deverá ser adequada para o que esperamos dos membros em nossos projetos. Sendo assim, não será tolerado:
 
-### - Falta de compromisso com os prazos
+### Falta de compromisso com os prazos
 
 Isso inclui começar a fazer a atividade em cima da hora, pois isso impede que você tenha tempo hábil para lidar com imprevistos, acarretando em atrasos que seriam facilmente evitáveis se houvesse maior antecedência na hora de fazer a atividade.
 
-### - Entregas incompletas ou mal feitas
+### Entregas incompletas ou mal feitas
 
 Não se restrinja apenas ao mínimo necessário para a atividade, dê o seu melhor e tente fazer algo que você teria orgulho de mostrar para as pessoas como prova do seu progresso.
 
-### - Ausência de comunicação com os orientadores
+### Ausência de comunicação com os orientadores
 
 - Está com dificuldade? Peça ajuda.
 - Não conseguirá entregar no prazo? Justifique com antecedência.
