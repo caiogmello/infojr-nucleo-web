@@ -48,6 +48,17 @@ O merge request deve seguir o padrão de título `[nº da atividade]: [título d
 
 Os orientadores fecharão o MR quando a atividade estiver concluída, e poderão adicionar comentários para passar feedback.
 
+### Taxa de aproveitamento
+
+Uma atividade é considerada entregue no momento em que todos os requisitos listados no enunciado forem atendidos, podendo isso acontecer dentro ou fora do prazo estipulado para a entrega da atividade. 
+
+Sendo assim, a sua taxa de aproveitamento é calculada a partir da seguinte fórmula: `(e + a / 2) / t`, onde:
+- e = entregas dentro do prazo
+- a = entregas fora do prazo, ou seja, atrasadas
+- t = número total de atividades (não contando a atividade final)
+
+No momento da atividade final, é necessário que a sua taxa de aproveitamento seja igual ou superior a **0.8** (ou 80%). Caso contrário, você não poderá fazer a atividade final e será eliminado do processo seletivo.
+
 ## Observações importantes
 
 Lembre-se de que o núcleo é o seu treinamento para começar a trabalhar nos projetos da InfoJr. Portanto, tenha em mente que sua postura aqui deverá ser adequada para o que esperamos dos membros em nossos projetos. Sendo assim, não será tolerado:
