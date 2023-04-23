@@ -1,6 +1,8 @@
 # 💻 Núcleo Web
 
-Olá, galerinha! Bem-vindos ao Núcleo Web! Este é o local de acesso às atividades deste ciclo. 
+Olá, pessoas! Bem-vindos ao Núcleo Web! Este é o local de acesso às atividades deste ciclo.
+
+Neste texto seguem algumas explicações importantes a respeito de como funcionará a sua trajetória aqui dentro.
 
 ## Configuração do ambiente
 
@@ -20,7 +22,7 @@ Por exemplo, se seu nome é Fulano de Tal e você está na turma 2, você dever�
 
 ## Entrega das atividades
 
-## Issues
+### Issues
 
 As atividades deste núcleo, juntamente com seus requisitos e materiais de apoio, estão listadas nas [issues](https://gitlab.com/InfoJrUFBA/nucleos/2023/2-ciclo/web/-/issues) deste repositório. 
 
