@@ -1,38 +1,48 @@
 # 💻 Núcleo Web
 
-Olá, galerinha! Bem-vindos ao Núcleo Web! Este é o local de acesso às atividades deste ciclo. Primeiramente, vocês terão que preparar o ambiente na sua máquina para começar a trabalhar.
+Olá, galerinha! Bem-vindos ao Núcleo Web! Este é o local de acesso às atividades deste ciclo. 
 
-### Criando uma branch
+## Configuração do ambiente
 
----
+### Requisitos do sistema
 
-A branch onde estarão localizadas as atividades é a **"main"**. Ela será atualizada quando uma nova atividade for lançada. Crie sua branch com o padrão ***[número da sua turma]-[seuNome-sobrenome]*** para armazenar as atividades feitas por você. 
+Primeiramente, vocês terão que preparar o ambiente na sua máquina para começar a trabalhar. 
 
-Exemplo: 
- 2-fulano-de-Tal (dentro da branch "2-fulano-de-Tal" terá todas as atividades que foram realizadas).
+Será necessário realizar a instalação do [Git](https://git-scm.com/downloads) e de uma IDE de código (preferenciamente o [VSCode](https://code.visualstudio.com/download))
 
-### Pull Request
+### Criando a sua branch
 
----
+A branch onde estarão localizadas as atividades é a `main`.
 
-É possível ocorrerem alterações no repositório durante o período do núcleo, como atualizações do README. Portanto, lembre-se periodicamente de inserir o comando ***git pull origin main***, para certificar-se de que sua branch está atualizada em relação à main, e assim evitar conflitos na hora do merge request.
+Crie sua branch a partir da main seguindo o padrão de nomenclatura `[nº da turma]-[nome]-[sobrenome]` para realizar as suas atividades.
+
+Por exemplo, se seu nome é Fulano de Tal e você está na turma 2, você deverá criar a partir da main uma branch com o nome `2-fulano-de-tal`
+
+## Entrega das atividades
+
+## Issues
+
+As atividades deste núcleo, juntamente com seus requisitos e materiais de apoio, estão listadas nas [issues](https://gitlab.com/InfoJrUFBA/nucleos/2023/2-ciclo/web/-/issues) deste repositório. 
 
 ### Commits
 
----
-
 Seus commits deverão ser contínuos e explicativos, então nada de fazer a atividade inteira em um só commit com a mensagem *"atividade do núcleo ae"*, beleza? Os orientadores precisam acompanhar o progresso dos membros, e isso será feito através dos seus commits no GitLab.
+
+### Pulls
+
+É possível ocorrerem alterações no repositório durante o período do núcleo, como atualizações do README. Portanto, lembre-se periodicamente de executar em sua branch o comando `git pull origin main`, para certificar-se de que sua branch está atualizada em relação à main, e assim evitar conflitos na hora do merge request.
 
 ### Merge Requests
 
----
+Quando terminar uma atividade, certifique-se de que todos os requisitos foram atendidos, e em seguida realize um [merge request](https://gitlab.com/InfoJrUFBA/nucleos/2023/2-ciclo/web/-/merge_requests) (MR) para a main, a fim de sinalizar para o orientador que finalizou sua atividade. 
 
-Quando terminar o trabalho, realize o merge request para a main, a fim de sinalizar para o orientador que finalizou sua atividade. O merge request deve seguir o padrão de título ***[número da atividade]-[nome da atividade]***
- (por exemplo: **1-WeLoveDogs** para indicar que finalizou a 1ª atividade do núcleo).
+O merge request deve seguir o padrão de título `[nº da atividade]: [título da atividade]`.
 
-## **Observações importantes**
+Os orientadores fecharão o MR quando a atividade estiver concluída, e poderão adicionar comentários para passar feedback.
 
-Lembre-se de que o núcleo é o seu treinamento para começar a trabalhar nos projetos da InfoJr. Portanto, tenha em mente que sua postura aqui deverá ser adequada para os nossos projetos. Sendo assim, não será tolerado:
+## Observações importantes
+
+Lembre-se de que o núcleo é o seu treinamento para começar a trabalhar nos projetos da InfoJr. Portanto, tenha em mente que sua postura aqui deverá ser adequada para o que esperamos dos membros em nossos projetos. Sendo assim, não será tolerado:
 
 ### - Falta de compromisso com os prazos
 
@@ -46,6 +56,8 @@ Não se restrinja apenas ao mínimo necessário para a atividade, dê o seu melh
 
 - Está com dificuldade? Peça ajuda.
 - Não conseguirá entregar no prazo? Justifique com antecedência.
-- Algo o incomoda no núcleo? Dê o seu feedback.
+- Algo te incomoda no núcleo? Dê o seu feedback.
 
 A comunicação é essencial em todas as áreas da vida. Os núcleos de estudo não são exceção.
+
+Por fim, lembre-se que a prioridade máxima aqui dentro é o seu aprendizado! Bons estudos! :)
