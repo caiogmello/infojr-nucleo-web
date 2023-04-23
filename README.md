@@ -26,6 +26,12 @@ Por exemplo, se seu nome é Fulano de Tal e você está na turma 2, você dever�
 
 As atividades deste núcleo, juntamente com seus requisitos e materiais de apoio, estão listadas nas [issues](https://gitlab.com/InfoJrUFBA/nucleos/2023/2-ciclo/web/-/issues) deste repositório. 
 
+### Pastas
+
+Cada projeto que será desenvolvido durante este ciclo possui uma pasta própria no repositório, na qual tudo que esteja relacionado a ele deverá estar contido. 
+
+Atente-se ao fato de que é possível que um mesmo projeto esteja sendo desenvolvido ao decorrer de várias atividades.
+
 ### Commits
 
 Seus commits deverão ser contínuos e explicativos, então nada de fazer a atividade inteira em um só commit com a mensagem *"atividade do núcleo ae"*, beleza? Os orientadores precisam acompanhar o progresso dos membros, e isso será feito através dos seus commits no GitLab.
