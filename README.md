@@ -48,16 +48,13 @@ O merge request deve seguir o padrão de título `[nº da atividade]: [título d
 
 Os orientadores fecharão o MR quando a atividade estiver concluída, e poderão adicionar comentários para passar feedback.
 
-### Taxa de aproveitamento
+### Strikes
 
-Uma atividade é considerada entregue no momento em que todos os requisitos listados no enunciado forem atendidos, podendo isso acontecer dentro ou fora do prazo estipulado para a entrega da atividade. 
+É imprescindível que você sempre entregue suas atividades no prazo. Em toda RN em que o trainee estiver com alguma atividade pendente, será aplicado a ele um "strike".
 
-Sendo assim, a sua taxa de aproveitamento é calculada a partir da seguinte fórmula: `(e + a / 2) / t`, onde:
-- e = entregas dentro do prazo
-- a = entregas fora do prazo, ou seja, atrasadas
-- t = número total de atividades (não contando a atividade final)
-
-No momento da atividade final, é necessário que a sua taxa de aproveitamento seja igual ou superior a **0.8** (ou 80%). Caso contrário, você não poderá fazer a atividade final e será eliminado do processo seletivo.
+Será **automaticamente eliminado do processo seletivo** o trainee que:
+- Receber 3 strikes antes da atividade final
+- Receber 2 strikes consecutivos antes da atividade final
 
 ## Observações importantes
 
