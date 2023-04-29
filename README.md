@@ -54,7 +54,7 @@ Os orientadores fecharão o MR quando a atividade estiver concluída, e poderão
 
 Em toda RN, caso você tenha atividades pendentes, será aplicado a você um "strike" para cada uma destas atividades.
 
-Será automaticamente **eliminado do processo seletivo** o trainee que acumular 3 strikes antes da atividade final.
+Será automaticamente **eliminado do processo seletivo** o trainee que acumular **3 strikes** antes da atividade final.
 
 ## Observações importantes
 
