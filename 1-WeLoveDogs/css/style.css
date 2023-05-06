@@ -9,51 +9,17 @@ a {
 }
 
 header {
-    height: 150px;
+    height: 120px;
     left: 0px;
     top: 0px;
 
 }
 
 nav {
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-}
-
-.nav-items li {
-    list-style: none;
-    margin-right: 35px;
-}
-
-.header-button {
-    width: 120px;
-    height: 40px;
-    left: 1274px;
-    top: 40px;
-
-    background: rgba(126, 211, 33, 0.4);
-    border-radius: 15px;
-    }
-
-body {
-    font-family: Open Sans;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-
-}
-section {
-    display: flex;
-    align-items: center;
 }
 
 nav .logo {
@@ -69,3 +35,64 @@ nav .logo {
 span {
     color: #7ED321;
 }
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items li {
+    list-style: none;
+    margin-right: 35px;
+}
+
+.nav-items li:last-child {
+    margin-right: 15px;
+}
+
+ .header-button {
+    color: #1C4701;
+    display: inline-block;
+    padding: 9px 32px;
+    background: rgba(126, 211, 33, 0.4);
+    border-radius: 15px;
+
+}
+
+body {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.section-button {
+    align-self: flex-end;
+    display: inline-block;
+    padding: 13px 55px;
+    background: #7ED321;
+    color: #1C4701;
+    border-radius: 15px;
+}
+
+form .section-button {
+    align-self: flex-end;
+    display: inline-block;
+    padding: 10px 45px;
+    background: #7ED321;
+    color: #1C4701;
+    border-radius: 10px;
+}
+.section-button a {
+    background-color: #7ED321;
+  }
+  
+
