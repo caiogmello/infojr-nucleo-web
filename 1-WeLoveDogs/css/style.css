@@ -194,8 +194,13 @@ form .input {
 }
 
 form label {
-    height: 50px;   
-    width: 80px;
+    text-align:center;
+    height: 50px;
+    width: 100px;
+    top: 283px;
+    border-radius: nullpx;
+
+    
 }
 
 form input  {
