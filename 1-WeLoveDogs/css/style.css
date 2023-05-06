@@ -1,3 +1,6 @@
+
+/* GERAL */
+
 * {
     box-sizing: border-box;
     background: #FFFFFF;
@@ -97,6 +100,11 @@ main {
 
 }
 
+.section-home image {
+    width: 1440px;
+    height: 904px;
+}
+
 .section-form {
     display: flex;
     align-items: center;
@@ -117,7 +125,21 @@ form {
     justify-content: center;
 }
 
+.content-home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    width: 371px;
+    height: 351px;
+}
+
+.content-home .section-button {
+    align-self: flex-start;
+}
+
 .h1-main {
+    align-self: center;
     font-size: 48px;
     line-height: 65px;
 }
@@ -144,10 +166,21 @@ p {
     line-height: 22px;
     letter-spacing: 0em;
     text-align: justified;
+    height: 185px;
+    width: 778px;
 
 }
 
-form .section-button {
+.section-blog .image {
+    align-self: flex-start;
+
+}
+
+.h2-main {
+    font-size: 32px;
+}
+
+.section-button {
     align-self: flex-end;
     display: inline-block;
     padding: 10px 45px;
@@ -158,6 +191,51 @@ form .section-button {
 .section-button a {
     background-color: #7ED321;
 }
+
+
+form .input {
+    display: flex;
+    flex-direction: row;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    height: 50px;   
+    width: 80px;
+}
+
+form input  {
+    border: 1px solid #9F9F9F;
+    font-size: 14px;
+    font-weight: 700;
+    height: 43px;
+    width: 418px;
+    left: 298px;
+    top: 346px;
+    border-radius: 7px;
+}
+
+form textarea {
+    border: 1px solid #9F9F9F;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    height: 160px;
+    width: 418px;
+    left: 298px;
+    top: 472px; 
+    border-radius: 7px;
+    resize:none;
+}
+
+form .section-button {
+    margin-top: 20px;
+}
+
+
 
   
 
