@@ -4,7 +4,7 @@
 * {
     box-sizing: border-box;
     background: #FFFFFF;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 body {
@@ -37,7 +37,7 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-
+    /* welovedogs */
 nav .logo {
     font-size: 48px;
     font-weight: 700;
@@ -47,7 +47,7 @@ nav .logo {
     color: #000000;
     margin-left: 15;
 }
-
+    /* "love" */
 span {
     color: #7ED321;
 }
@@ -66,7 +66,7 @@ nav ul {
     margin-right: 15px;
 }
 
- .header-button {
+.header-button {
     color: #1C4701;
     display: inline-block;
     padding: 9px 32px;
@@ -76,6 +76,7 @@ nav ul {
 }
 
 /* MAIN */
+
 
 main {
     display: flex;
@@ -92,18 +93,86 @@ main {
     justify-content: center;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+p {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: justified;
+    height: 185px;
+    width: 778px;
+
+}
+
+.h1-main {
+    align-self: center;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+
+
+/*Página home*/
+
 .section-home {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .section-home image {
     width: 1440px;
     height: 904px;
 }
+
+.content-home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 371px;
+    height: 351px;
+}
+
+.content-home .section-button {
+    align-self: flex-start;
+}
+
+.section-button {
+    align-self: flex-end;
+    display: inline-block;
+    padding: 13px 55px;
+    background: #7ED321;
+    color: #1C4701;
+    border-radius: 15px;
+}
+
+/* Página blog */
+
+.section-blog {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+.section-blog .image {
+    align-self: flex-start;
+}
+
+.h2-main {
+    font-size: 32px;
+}
+
+/* Página de incrição */
 
 .section-form {
     display: flex;
@@ -118,80 +187,6 @@ form {
     flex-direction: column;
     align-items: flex-end;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.content-home {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    
-    width: 371px;
-    height: 351px;
-}
-
-.content-home .section-button {
-    align-self: flex-start;
-}
-
-.h1-main {
-    align-self: center;
-    font-size: 48px;
-    line-height: 65px;
-}
-
-.section-button {
-    align-self: flex-end;
-    display: inline-block;
-    padding: 13px 55px;
-    background: #7ED321;
-    color: #1C4701;
-    border-radius: 15px;
-}
-
-.section-blog {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row-reverse;
-}
-
-p {
-    font-family: Open Sans;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: justified;
-    height: 185px;
-    width: 778px;
-
-}
-
-.section-blog .image {
-    align-self: flex-start;
-
-}
-
-.h2-main {
-    font-size: 32px;
-}
-
-.section-button {
-    align-self: flex-end;
-    display: inline-block;
-    padding: 10px 45px;
-    background: #7ED321;
-    color: #1C4701;
-    border-radius: 10px;
-}
-.section-button a {
-    background-color: #7ED321;
-}
-
 
 form .input {
     display: flex;
@@ -199,10 +194,6 @@ form .input {
 }
 
 form label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-start;
     height: 50px;   
     width: 80px;
 }
@@ -233,6 +224,16 @@ form textarea {
 
 form .section-button {
     margin-top: 20px;
+    align-self: flex-end;
+    display: inline-block;
+    padding: 10px 45px;
+    background: #7ED321;
+    color: #1C4701;
+    border-radius: 15px;
+}
+
+.section-button a {
+    background-color: #7ED321;
 }
 
 
