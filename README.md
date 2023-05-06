@@ -52,7 +52,9 @@ Os orientadores fecharão o MR quando a atividade estiver concluída, e poderão
 
 É imprescindível que você sempre entregue suas atividades no prazo. O prazo máximo para cada atividade será até **4h antes da próxima RN**, para que o seu orientador tenha tempo hábil para analisá-la.
 
-Em toda RN, caso você tenha atividades pendentes, será aplicado a você um "strike" para cada uma destas atividades.
+Vale ressaltar que uma atividade será considerada somente no momento em que **todos** os requisitos do enunciado forem devidamente atendidos.
+
+4h antes de cada RN, o orientador irá verificar se você tem atividades pendentes e, caso tenha, será aplicado a você um "strike" para cada uma destas atividades.
 
 Será automaticamente **eliminado do processo seletivo** o trainee que acumular **3 strikes** antes da atividade final.
 
