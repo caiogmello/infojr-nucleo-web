@@ -6,8 +6,6 @@
 
 body {
     background-color: #BCCDD0;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -18,22 +16,37 @@ body {
 
 /* Card  */
 
+
 .card {
     background: #DFDFD6;
     display: flex;
     flex-direction: row;
-    width: 875px;
-    height: 491.63px;
+    max-width: 875px;
     border-radius: 30px;
-    
 }
+
+@media screen and (max-width: 768px){
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 93%;
+        max-height: 93%;
+        border-radius: 30px;
+    }
+
+    .card-image {
+        transform: rotate(90deg);
+    }
+
+}
+
 
 /* Imagem das folhas */
 
 .card-image {
-    width: 291px;
-    height: 492px;
-} 
+    max-width: 33.2%;
+}
 
 /* informação do card*/
 
@@ -57,7 +70,6 @@ header h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 36px;
     font-weight: 600;
-    line-height: 36px;
     letter-spacing: 0em;
     text-align: left;
 
@@ -67,7 +79,6 @@ p {
     font-family: 'Open Sans', sans-serif; 
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
 }
@@ -90,7 +101,6 @@ p {
     font-style: normal;
     font-size: 24px;
     font-weight: 500;
-    line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
 }
@@ -99,7 +109,6 @@ p {
     font-family: Overpass;
     font-size: 16px;
     font-weight: 500;
-    line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
 
