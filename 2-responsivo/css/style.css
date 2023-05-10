@@ -22,32 +22,43 @@ body {
     display: flex;
     flex-direction: row;
     max-width: 875px;
+    min-height: 491.63px;
     border-radius: 30px;
-}
-
-@media screen and (max-width: 768px){
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 93%;
-        max-height: 93%;
-        border-radius: 30px;
-    }
-
-    .card-image {
-        transform: rotate(90deg);
-    }
-
 }
 
 
 /* Imagem das folhas */
 
 .card-image {
-    max-width: 33.2%;
+    width: 170%;
+    background-size: cover;
+    background-image: url('../images/image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+
+@media screen and (max-width: 768px){
+    .card {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        max-width: 93%;
+        max-height: 93%;
+        border-radius: 30px;
+    }
+
+    .card-image {
+        width: 100%;
+        min-height: 202px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url('../images/image.png');
+        background-size:contain;
+        transform: rotate(90deg);
+    }
+}
 /* informação do card*/
 
 .card-info {
