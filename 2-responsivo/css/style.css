@@ -125,15 +125,20 @@ p {
 .footer {
     font-family: 'Overpass', sans-serif;
     display: flex;
+    flex-direction: column;    
+    gap: 8px;
+}
+
+.not-hidden {
+    display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    
 }
 
 /* Nome e data */
 
-.footer h1 {
+.not-hidden h1 {
     color: #111313;
     font-style: normal;
     font-size: 24px;
@@ -142,7 +147,7 @@ p {
     text-align: left;
 }
 
-.footer h2 {
+.not-hidden h2 {
     font-family: Overpass;
     font-size: 16px;
     font-weight: 500;
@@ -176,4 +181,10 @@ button:hover img{
     opacity: 0.9;
     border-style:hidden;
     background-color: #DFDFD6;
+}
+
+#social-medias {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
