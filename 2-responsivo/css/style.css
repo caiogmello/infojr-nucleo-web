@@ -73,6 +73,9 @@ p {
     text-align: left;
 }
 
+
+/* Tudo acima - responsivo para mobile usando o limite de 768px de largura */
+
 @media screen and (max-width: 768px){
     .card {
         display: flex;
@@ -170,6 +173,8 @@ p {
     gap: 11px;
 }
 
+/* Botão compartilhar */
+
 button {
     border-style:hidden;
     background-color: #DFDFD6;
@@ -181,6 +186,8 @@ button:hover img{
     border-style:hidden;
     background-color: #DFDFD6;
 }
+
+/* Menu de redes sociais */
 
 #social-medias {
     height: 35px;
