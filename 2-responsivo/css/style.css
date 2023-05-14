@@ -30,7 +30,7 @@ body {
 /* Imagem das folhas */
 
 .card-image {
-    width: 170%;
+    width: 200%;
     background-size: cover;
     background-image: url('../images/image.png');
     background-repeat: no-repeat;
@@ -79,6 +79,7 @@ p {
         flex-direction: column;
         align-items: center;
         max-width: 93%;
+        min-height: 200px;
         border-radius: 30px;
     }
 
@@ -96,8 +97,8 @@ p {
     .card-info {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 70px;
+        justify-content: flex-end;
+        gap: 30px;
         padding: 25px 30px;
     }
 
@@ -118,8 +119,6 @@ p {
     }
 }
 
-
-
 /* Footer */
 
 .footer {
@@ -129,6 +128,11 @@ p {
     gap: 8px;
 }
 
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .not-hidden {
     display: flex;
     flex-direction: row;
@@ -156,11 +160,6 @@ p {
 
 }
 
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 /* Perfil completo */
 
@@ -184,7 +183,9 @@ button:hover img{
 }
 
 #social-medias {
+    height: 35px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
 }
