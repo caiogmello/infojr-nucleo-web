@@ -1,15 +1,52 @@
 button {
     border: none;
-    border-radius: 100%;
-    height: 2.5em;
-    width: 2.5em;
-    font-size: 1.5em;
+    /* border-radius: 100%; */
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    font-size: 2em;
+    color: white;       
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.calculator {
+    background-color: #000;
+    width: 375px;
+    padding: 50px 10px 30px 10px;
+    border-radius: 35px;
+}
+
+.display {
+    height: 100px;
 }
 
 .buttons {
     display: flex;
-    align-items: center;
-    gap: 7px;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
-    width: 300px;
+
+}
+
+.operations {
+    background-color: #f69906;
+}
+
+.number, 
+.comma {
+    background-color: #313131;
+}
+
+.grey-buttons {
+    background-color: #a0a0a0;
+    color: #000;
+}
+
+#zero {
+    width: 170px;
+    padding-right: 95px;
 }
