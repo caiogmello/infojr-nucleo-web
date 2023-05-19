@@ -1,25 +1,43 @@
 import React, { useState } from "react";
-import "../Calculator.css"
+import "Calculator.css"
 export default function Calculator() {
+
     const [number, setNumber] = useState("");
+    // const [numberSize, setNumberSize] = useState(0);
     const [tempNumber, setTempNumber] = useState("");
     const [clearName, setClearName] = useState("AC");
     const [operator, setOperator] = useState("=");
+    const [commaIn, setCommaIn] = useState(0);
     
     function getNumber(v) {
-        console.log(number);
-        if(number == 0){
-            setNumber(v.target.value);
-        } else {
-            setNumber(number + v.target.value);
+        // if(numberSize === 9){
+        //     return;
+        // }
+
+        if(v.target.value === "." && number != ""){
+            setCommaIn(1);
+            if(commaIn === 0) {
+                setNumber(number + v.target.value);
+            }
+        }
+        else{
+            if(number == 0 && commaIn === 0){
+                setNumber(v.target.value);
+            } 
+            else {
+                setNumber(number + v.target.value);
+            }
         }
 
+        // setNumberSize(numberSize+1);
         setClearName("C");
     }
 
     function clear() {
         setNumber("");
+        setCommaIn(0);
         setClearName("AC");
+        // setNumberSize(0);
     }
 
     function simpleOperation(t) {
@@ -32,7 +50,10 @@ export default function Calculator() {
                 setNumber(number/100);
             }
             else if (type === ",") {
-                setNumber(number + ".");
+                if(commaIn == 0){
+                    setNumber(number + ".");
+                    setCommaIn(1);
+                }
             }
         }
     } 
@@ -42,6 +63,8 @@ export default function Calculator() {
         setTempNumber(number);
         setOperator(oper);
         setNumber("");
+        setCommaIn(0);
+        // setNumberSize(0);
     }
 
     function operation() {
@@ -52,11 +75,13 @@ export default function Calculator() {
             setNumber(number*tempNumber);
         }
         else if(operator === "+") {
-            setNumber(number + tempNumber);
+            setNumber(number-(-1*tempNumber));
         }
         else if(operator === "-") {
             setNumber(tempNumber-number);
         }
+
+        setOperator("=")
     }
 
     return (

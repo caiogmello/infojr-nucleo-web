@@ -1,3 +1,29 @@
+.calculator {  
+    font-family: 'Wix Madefor Display', sans-serif;    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #000;
+    width: 375px;
+    padding: 50px 10px 30px 10px;
+    border-radius: 35px;
+}
+
+.display {
+    padding-left: 12px;
+    padding-right: 18px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+}
+
+p {
+    overflow:hidden;
+    text-overflow:clip;
+    color:#fff;
+    font-size: 3.8em;
+}
+
 button {
     font-family: 'Wix Madefor Display', sans-serif;    border: none;
     border-radius: 50px;
@@ -12,35 +38,11 @@ button:hover {
     opacity: 70%;
 }
 
-.calculator {  
-    font-family: 'Wix Madefor Display', sans-serif;    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #000;
-    width: 375px;
-    padding: 50px 10px 30px 10px;
-    border-radius: 35px;
-}
-
-.display {
-    padding-right: 18px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100px;
-}
-
-p {
-    color:#fff;
-    font-size: 4em;
-}
-
 .buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-
 }
 
 .operations {
