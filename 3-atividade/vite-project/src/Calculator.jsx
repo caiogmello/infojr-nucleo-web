@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import "Calculator.css"
+import "./Calculator.css"
 export default function Calculator() {
 
     const [number, setNumber] = useState("");
-    // const [numberSize, setNumberSize] = useState(0);
     const [tempNumber, setTempNumber] = useState("");
     const [clearName, setClearName] = useState("AC");
     const [operator, setOperator] = useState("=");
     const [commaIn, setCommaIn] = useState(0);
     
     function getNumber(v) {
-        // if(numberSize === 9){
-        //     return;
-        // }
-
-        if(v.target.value === "." && number != ""){
+        if(v.target.value === "."){
             setCommaIn(1);
             if(commaIn === 0) {
                 setNumber(number + v.target.value);
@@ -28,8 +23,6 @@ export default function Calculator() {
                 setNumber(number + v.target.value);
             }
         }
-
-        // setNumberSize(numberSize+1);
         setClearName("C");
     }
 
@@ -37,7 +30,6 @@ export default function Calculator() {
         setNumber("");
         setCommaIn(0);
         setClearName("AC");
-        // setNumberSize(0);
     }
 
     function simpleOperation(t) {
@@ -64,7 +56,6 @@ export default function Calculator() {
         setOperator(oper);
         setNumber("");
         setCommaIn(0);
-        // setNumberSize(0);
     }
 
     function operation() {

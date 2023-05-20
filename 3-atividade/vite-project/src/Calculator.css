@@ -18,7 +18,7 @@
 }
 
 p {
-    overflow:hidden;
+    overflow:scroll;
     text-overflow:clip;
     color:#fff;
     font-size: 3.8em;
