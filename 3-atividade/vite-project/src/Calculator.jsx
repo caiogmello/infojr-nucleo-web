@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import "./Calculator.css"
 export default function Calculator() {
 
+    // Número que aparece no display
     const [number, setNumber] = useState("");
+    // Número temporário que serve como memória
     const [tempNumber, setTempNumber] = useState("");
+    // Status do botão de Clear
     const [clearName, setClearName] = useState("AC");
+    // Qual operador está sendo usado
     const [operator, setOperator] = useState("=");
+    // Para monitorar quantas vírgulas já foram usadas (0 ou 1)
     const [commaIn, setCommaIn] = useState(0);
     
+
+    // Função para escrever um número na tela com o press de botão
     function getNumber(v) {
         if(v.target.value === "."){
             setCommaIn(1);
@@ -26,12 +33,14 @@ export default function Calculator() {
         setClearName("C");
     }
 
+    // Função para limpar a display
     function clear() {
         setNumber("");
         setCommaIn(0);
         setClearName("AC");
     }
 
+    //  Função de operações simples, que não precisam de memória (+/- e %)
     function simpleOperation(t) {
         var type = t.target.value;
         if(number != ""){
@@ -41,15 +50,10 @@ export default function Calculator() {
             else if (type === "%") {
                 setNumber(number/100);
             }
-            else if (type === ",") {
-                if(commaIn == 0){
-                    setNumber(number + ".");
-                    setCommaIn(1);
-                }
-            }
         }
     } 
 
+    // Função de definir o operador que vai ser usado (/, +, -, *) com o botão
     function getOperator(op) {
         var oper = op.target.value;
         setTempNumber(number);
@@ -58,6 +62,7 @@ export default function Calculator() {
         setCommaIn(0);
     }
 
+    // Função de operação, acionada quando se pressiona o "="
     function operation() {
         if(operator === "/") {
             setNumber(tempNumber/number);
@@ -76,7 +81,7 @@ export default function Calculator() {
     }
 
     return (
-
+        // Calculadora completa
         <section className="calculator">
             <div className="display">
                 <p>{number}</p>

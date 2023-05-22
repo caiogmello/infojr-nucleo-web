@@ -1,13 +1,14 @@
+/* Geral */
 .calculator {  
     font-family: 'Wix Madefor Display', sans-serif;    display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #000;
     width: 375px;
-    padding: 50px 10px 30px 10px;
+    padding: 50px 8px 30px 8px;
     border-radius: 35px;
 }
-
+/* Display */
 .display {
     padding-left: 12px;
     padding-right: 18px;
@@ -24,6 +25,7 @@ p {
     font-size: 3.8em;
 }
 
+/* Botões */
 button {
     font-family: 'Wix Madefor Display', sans-serif;    border: none;
     border-radius: 50px;
@@ -47,6 +49,11 @@ button:hover {
 
 .operations {
     background-color: #f69906;
+}
+
+.operations:focus {
+    color: #f69906;
+    background-color: #fff;
 }
 
 .number, 
