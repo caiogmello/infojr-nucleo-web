@@ -1,0 +1,11 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+:root {
+    display: flex;
+    justify-content: center;
+    background-color: #35571f
+}
