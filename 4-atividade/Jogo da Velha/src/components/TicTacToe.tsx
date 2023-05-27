@@ -9,7 +9,7 @@ export default function TicTacToe() {
                 Jogo da velha
             </h1>
             <Table
-                symbol="O"
+                symbol="X"
             />
         </main>
       
