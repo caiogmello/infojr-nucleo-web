@@ -23,14 +23,22 @@ export default function Table({symbol} : {symbol: string}) {
             const [a,b,c] = winConditions[i];
 
             if(table[a] !== "" && table[a] === table[b] && table[b] === table[c]){
-                setWinner(table[a]);
+                setWinner("" + table[a]);
                 return true;
             }
         }
         return false;
     }
 
+    function checkDraw () {
+        for(let i = 0; i < table.length; i++) {
+            if(table[i] === "") return false;
+        }
+        return true;
+    }
+
     function putValue(index: number){
+
         if(tempTable[index] !== "") return
         if(value === "X") {
             setValue("O")
@@ -43,13 +51,19 @@ export default function Table({symbol} : {symbol: string}) {
 
         if(checkWin()){
             setTimeout(() => {
-                alert("Acabou o jogo");
+                alert("Vencedor: " + winner);
             }, 0);
             setValue("");
         }
-    }
 
-    
+        if(checkDraw()) {
+            setTimeout(() => {
+                alert("Empate!");
+            }, 0);
+            setValue("");
+            return;
+        }
+    }
 
 
     return (
