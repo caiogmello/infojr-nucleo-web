@@ -1,0 +1,36 @@
+button{
+    font-family: 'Cherry Bomb One', cursive;
+    padding-bottom: 15px;
+    line-height: 100%;
+    text-align: center;
+    font-size: 110px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 3px;
+    background-color: rgb(226, 230, 198);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px #181717;
+    border: none;
+    height: 140px;
+    width: 140px;
+}
+
+.game button:hover {
+    cursor: pointer;
+    box-shadow:0px 1px 10px #181717;
+    background-color: #f0eee8;
+}
+
+.X {
+    color: #3e3bdf;
+}
+
+.O {
+    color: #991010;
+}
+
+.game .X:hover, .game .O:hover {
+    cursor:auto;
+    background-color: rgb(226, 230, 198);
+    box-shadow: 0px 5px 10px #181717;
+
+}

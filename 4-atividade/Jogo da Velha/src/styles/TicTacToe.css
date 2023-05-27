@@ -1,0 +1,11 @@
+.main-game {
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-title {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+}

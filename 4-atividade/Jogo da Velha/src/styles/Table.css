@@ -1,0 +1,12 @@
+.game {
+    /* background-color: #000; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 10px;
+    height: 450px;
+    width: 450px;
+}
