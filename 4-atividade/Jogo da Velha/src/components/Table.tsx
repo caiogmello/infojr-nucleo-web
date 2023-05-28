@@ -1,8 +1,9 @@
 import Square from "./Square";
 import "../styles/Table.css"
 import { useState } from "react";
+import { useEffect } from "react";
 
-export default function Table({symbol} : {symbol: string}) {
+export default function Table({symbol, reset} : {symbol: string; reset: boolean}) {
     const [value, setValue] = useState(symbol);
     const [table, setTable] = useState<string[]>(["", "", "", "", "", "", "", "", ""]);
     const [winner, setWinner] = useState("");
@@ -17,6 +18,22 @@ export default function Table({symbol} : {symbol: string}) {
         [0, 4, 8] , // Diagonal
         [2, 4, 6] // Diagonal
     ];
+
+    useEffect(() => {
+        if (reset) {
+          setValue(""); // Reinicializa o estado value para uma string vazia
+          setTable(["", "", "", "", "", "", "", "", ""]); // Reinicializa o estado table para um array vazio
+          setWinner(""); // Reinicializa o estado winner para uma string vazia
+        }
+      }, [reset]);
+
+    useEffect(() => {
+        if (winner) {
+            setTimeout(() => {
+            alert("Vencedor: " + winner);
+            }, 0);
+        }
+    }, [winner]);
 
     function checkWin() {
         for(let i = 0; i < winConditions.length; i++) {
@@ -50,9 +67,6 @@ export default function Table({symbol} : {symbol: string}) {
         setTable(tempTable);
 
         if(checkWin()){
-            setTimeout(() => {
-                alert("Vencedor: " + winner);
-            }, 0);
             setValue("");
         }
 
