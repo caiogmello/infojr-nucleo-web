@@ -3,12 +3,17 @@ import Menu from "./components/Menu"
 import { useState } from "react"
 
 function App() {
-  const [gameStarted, setGameStarted] = useState(true);
+  const [gameMode, setGameMode] = useState(""); // Estado para controlar o modo de jogo selecionado
 
-  return  <div className="App">
-    {gameStarted ? <TicTacToe/> : <Menu/>}
-      {/* <TicTacToe/> */}
-  </div>
+  return (
+    <div className="App">
+      {gameMode === "" ? (
+        <Menu setGameMode={setGameMode} />
+      ) : (
+        <TicTacToe gameMode={gameMode} />
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;

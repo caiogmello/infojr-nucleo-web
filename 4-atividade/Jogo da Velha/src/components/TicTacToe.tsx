@@ -2,7 +2,7 @@ import "../styles/TicTacToe.css"
 import Table from "./Table";
 import { useEffect, useState } from "react";
 
-export default function TicTacToe() {
+export default function TicTacToe({ gameMode }: { gameMode: string }) {
 
     const [symbol, setSymbol] = useState("");
     const [reset, setReset] = useState(false); // Estado de reinicialização
@@ -47,7 +47,7 @@ export default function TicTacToe() {
                     </div>
                 </div>
             </header>
-            {symbol !== "" && <Table symbol={symbol} reset={reset} />}
+            {symbol !== "" && <Table symbol={symbol} reset={reset} gameMode={gameMode}/>}
             <button className="restart" onClick={restart}>Recomeçar</button>
         </main>
       
