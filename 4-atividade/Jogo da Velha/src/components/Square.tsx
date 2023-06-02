@@ -1,12 +1,12 @@
 import { useState } from "react"
 import "../styles/Square.css"
 
-export default function Square({ valor, onClick } : {valor: string, onClick: () => void}){
+export default function Square({onClick } : { onClick: () => string}){
     const [value, setValue] = useState("")
+    
     function putValue(){
-        onClick();
         if(value === "") {
-            setValue(valor)
+            setValue(onClick());
             return
         }
     }

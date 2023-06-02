@@ -6,6 +6,8 @@ import { useEffect } from "react";
 export default function Table({symbol, reset, gameMode} : {symbol: string; reset: boolean; gameMode: string;}) {
     // símbolo atual
     const [value, setValue] = useState(symbol);
+    // estado que define de quem é a vez
+    const [playerTurn, setPlayerTurn] = useState(true);
     // array com os valores de cada quadrado
     const [table, setTable] = useState<string[]>(["", "", "", "", "", "", "", "", ""]);
     // vencedor
@@ -64,10 +66,37 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
         return true;
     }
 
+    function play(index: number) {
+        if(gameMode === "1P") {
+            if(playerTurn) {
+                setPlayerTurn(!playerTurn);
+                console.log(table);
+                return putValue(index);
+            } else {
+                setPlayerTurn(!playerTurn);
+                console.log(table);
+                return putValue(computerPlay());
+            }
+        } else {
+            return putValue(index);
+        }
+    }
+  
+    
+
+    function computerPlay() {
+        let index = Math.floor(Math.random() * 9);
+        while(table[index] !== "") {
+            index = Math.floor(Math.random() * 9);
+        }
+
+        return index;
+    }
+
     // função para colocar o valor no quadrado
     function putValue(index: number){
         // se o quadrado já estiver preenchido, não faz nada
-        if(tempTable[index] !== "") return
+        if(tempTable[index] !== "") return "a";
         // se o valor for X, coloca X no quadrado e muda o valor atual para O
         if(value === "X") {
             setValue("O")
@@ -80,6 +109,8 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
         }
         // atualiza o estado table
         setTable(tempTable);
+        // muda o estado playerTurn
+        setPlayerTurn(!playerTurn);
 
         // verifica se houve vencedor
         if(checkWin()){
@@ -92,8 +123,9 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
                 alert("Empate!");
             }, 0);
             setValue("");
-            return;
         }
+
+        return table[index];
     }
 
 
@@ -101,42 +133,32 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
     return (
     <section className="game">
         <Square 
-        // passa o valor do estado value para o componente Square
-            valor={value}
         // passa a função putValue para o componente Square
-            onClick={() => putValue(0)}
+            onClick={() => play(0)}
         />
         <Square  
-            valor={value}
-            onClick={() => putValue(1)}
+            onClick={() => play(1)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(2)}
+            onClick={() => play(2)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(3)}
+            onClick={() => play(3)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(4)}
+            onClick={() => play(4)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(5)}
+            onClick={() => play(5)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(6)}
+            onClick={() => play(6)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(7)}
+            onClick={() => play(7)}
         />
         <Square 
-            valor={value}
-            onClick={() => putValue(8)}
+            onClick={() => play(8)}
         />
     </section>
     )
