@@ -12,6 +12,9 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
     const [table, setTable] = useState<string[]>(["", "", "", "", "", "", "", "", ""]);
     // vencedor
     const [winner, setWinner] = useState("");
+    const squareComponents = table.map((value, index) => {
+        return <Square key={index} value = {value} onClick={() => play(index)} />
+    });
     // tabela temporária
     const tempTable = table;
     // condições de vitória
@@ -25,6 +28,14 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
         [0, 4, 8] , // Diagonal
         [2, 4, 6] // Diagonal
     ];
+
+    
+    if(!playerTurn) {
+        setTimeout(() => {
+            putValue(computerPlay());
+        }, 300);
+        setPlayerTurn(true);
+    }
 
     // função para reiniciar o jogo
     useEffect(() => {
@@ -70,15 +81,10 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
         if(gameMode === "1P") {
             if(playerTurn) {
                 setPlayerTurn(!playerTurn);
-                console.log(table);
-                return putValue(index);
-            } else {
-                setPlayerTurn(!playerTurn);
-                console.log(table);
-                return putValue(computerPlay());
-            }
+                 putValue(index);
+            } 
         } else {
-            return putValue(index);
+             putValue(index);
         }
     }
   
@@ -89,15 +95,16 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
         while(table[index] !== "") {
             index = Math.floor(Math.random() * 9);
         }
-
+    console.log("indice",index)
         return index;
     }
 
     // função para colocar o valor no quadrado
     function putValue(index: number){
+        console.log("putValue")
         // se o quadrado já estiver preenchido, não faz nada
-        if(tempTable[index] !== "") return "a";
         // se o valor for X, coloca X no quadrado e muda o valor atual para O
+        if(table[index] !== "") return;
         if(value === "X") {
             setValue("O")
             tempTable[index] = "X";
@@ -110,7 +117,6 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
         // atualiza o estado table
         setTable(tempTable);
         // muda o estado playerTurn
-        setPlayerTurn(!playerTurn);
 
         // verifica se houve vencedor
         if(checkWin()){
@@ -125,41 +131,13 @@ export default function Table({symbol, reset, gameMode} : {symbol: string; reset
             setValue("");
         }
 
-        return table[index];
     }
 
 
 
     return (
     <section className="game">
-        <Square 
-        // passa a função putValue para o componente Square
-            onClick={() => play(0)}
-        />
-        <Square  
-            onClick={() => play(1)}
-        />
-        <Square 
-            onClick={() => play(2)}
-        />
-        <Square 
-            onClick={() => play(3)}
-        />
-        <Square 
-            onClick={() => play(4)}
-        />
-        <Square 
-            onClick={() => play(5)}
-        />
-        <Square 
-            onClick={() => play(6)}
-        />
-        <Square 
-            onClick={() => play(7)}
-        />
-        <Square 
-            onClick={() => play(8)}
-        />
+        {squareComponents}
     </section>
     )
 }
