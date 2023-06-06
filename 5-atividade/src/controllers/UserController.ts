@@ -1,10 +1,11 @@
 import { PrismaClient } from "@prisma/client";
+import { Request, Response } from "express";
 const prisma = new PrismaClient();
 
 export default {
 
     // Rota para criar usuário
-    async createUser(req: any, res: any) {
+    async createUser(req: Request, res: Response) {
         try {
             const { name, email, age, state, city } = req.body
 
@@ -12,7 +13,7 @@ export default {
 
             if (user) {
                 return res.json({ error: "Já existe um usuário com este email" })
-            }
+            }   
             user = await prisma.user.create({
                 data: {
                     name,
@@ -30,7 +31,7 @@ export default {
     },
 
     // para listar um usuário por ID
-    async listUserId(req: any, res: any) {
+    async listUserId(req: Request, res: Response) {
         try {
             const { id } = req.params;
             const users = await prisma.user.findUnique({ where: { id: Number(id) } })
@@ -44,7 +45,7 @@ export default {
     },
 
     // para listar um usuário por email
-    async listUserEmail(req: any, res: any) {
+    async listUserEmail(req: Request, res: Response) {
         try {
             const { email } = req.params;
             const users = await prisma.user.findUnique({ where: { email } })
@@ -58,7 +59,7 @@ export default {
     },
 
     // para listar um ou mais usuários por nome
-    async listUserName(req: any, res: any) {
+    async listUserName(req: Request, res: Response) {
         const names = req.params.names.split(',');
         try {
             const foundNames = await prisma.user.findMany({
@@ -77,7 +78,7 @@ export default {
     },
 
     // para atualizar um usuário
-    async updateUser(req: any, res: any) {
+    async updateUser(req: Request, res: Response) {
         try {
             const { id } = req.params;
             const { name, email, age, state, city } = req.body;
@@ -106,7 +107,7 @@ export default {
     },
 
     // para deletar um usuário
-    async deleteUser(req: any, res: any) {
+    async deleteUser(req: Request, res: Response) {
         try {
             const { id } = req.params;
             let users = await prisma.user.findUnique({ where: { id: Number(id) } })
@@ -123,7 +124,7 @@ export default {
     },
 
     // para listar todos os usuários
-    async listUsers(req: any, res: any) {
+    async listUsers(req: Request, res: Response) {
         try {
             const users = await prisma.user.findMany();
             return res.json(users);
