@@ -9,7 +9,7 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Teste",
+							"text": "Título",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -22,7 +22,7 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "testinho",
+							"text": "Subtítulo",
 							"spans": []
 						},
 						"direction": "ltr"

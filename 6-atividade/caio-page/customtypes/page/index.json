@@ -9,7 +9,12 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": {} }
+        "config": {
+          "choices": {
+            "quem_somos": { "type": "SharedSlice" },
+            "title": { "type": "SharedSlice" }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -34,7 +39,8 @@
           "placeholder": "A title of the page used for social media and search engines"
         },
         "type": "Text"
-      }
+      },
+      "uid": { "type": "UID", "config": { "label": "home", "placeholder": "" } }
     }
   }
 }

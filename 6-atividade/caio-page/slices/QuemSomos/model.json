@@ -32,7 +32,11 @@
         },
         "image": {
           "type": "Image",
-          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+          "config": {
+            "label": "Image",
+            "constraint": { "width": 500, "height": 500 },
+            "thumbnails": []
+          }
         }
       },
       "items": {}

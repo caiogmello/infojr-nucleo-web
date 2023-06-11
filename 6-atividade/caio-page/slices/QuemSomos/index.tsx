@@ -2,14 +2,8 @@ import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
-/**
- * Props for `QuemSomos`.
- */
 export type QuemSomosProps = SliceComponentProps<Content.QuemSomosSlice>;
 
-/**
- * Component for "QuemSomos" Slices.
- */
 const QuemSomos = ({ slice }: QuemSomosProps): JSX.Element => {
   return (
     <section

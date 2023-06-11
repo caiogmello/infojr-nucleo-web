@@ -56,7 +56,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = never;
+type PageDocumentDataSlicesSlice = QuemSomosSlice | TitleSlice;
 /**
  * Page document from Prismic
  *
@@ -67,7 +67,7 @@ type PageDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = PageDocument;
 /**
  * Primary content in QuemSomos → Primary
