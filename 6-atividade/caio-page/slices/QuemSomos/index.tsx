@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `QuemSomos`.
@@ -15,7 +16,9 @@ const QuemSomos = ({ slice }: QuemSomosProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for quem_somos (variation: {slice.variation}) Slices
+      <PrismicRichText field={slice.primary.title} />
+      <PrismicRichText field={slice.primary.body} />
+      <PrismicNextImage field={slice.primary.image} />
     </section>
   );
 };

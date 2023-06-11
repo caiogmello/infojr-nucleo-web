@@ -136,6 +136,32 @@ export type QuemSomosSlice = prismic.SharedSlice<
   QuemSomosSliceVariation
 >;
 /**
+ * Primary content in Title → Primary
+ *
+ */
+interface TitleSliceDefaultPrimary {
+  /**
+   * Title field in *Title → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismic.TitleField;
+  /**
+   * Subtitle field in *Title → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  subtitle: prismic.TitleField;
+}
+/**
  * Default variation for Title Slice
  *
  * - **API ID**: `default`
@@ -145,7 +171,7 @@ export type QuemSomosSlice = prismic.SharedSlice<
  */
 export type TitleSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<TitleSliceDefaultPrimary>,
   never
 >;
 /**
@@ -179,6 +205,7 @@ declare module "@prismicio/client" {
       QuemSomosSliceDefault,
       QuemSomosSliceVariation,
       QuemSomosSlice,
+      TitleSliceDefaultPrimary,
       TitleSliceDefault,
       TitleSliceVariation,
       TitleSlice,
