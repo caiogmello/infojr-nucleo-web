@@ -6,13 +6,21 @@ export type QuemSomosProps = SliceComponentProps<Content.QuemSomosSlice>;
 
 const QuemSomos = ({ slice }: QuemSomosProps): JSX.Element => {
   return (
-    <section
+    <section className="quem-somos"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <PrismicRichText field={slice.primary.title} />
-      <PrismicRichText field={slice.primary.body} />
-      <PrismicNextImage field={slice.primary.image} />
+      <div className="text">
+        <div className="title">
+          <PrismicRichText field={slice.primary.title} />
+        </div>
+        <div className="body">
+          <PrismicRichText field={slice.primary.body} />
+        </div>
+      </div>
+      <div className="image">
+        <PrismicNextImage field={slice.primary.image} />
+      </div>
     </section>
   );
 };
