@@ -60,7 +60,7 @@ const TagEntrada = styled.div`
     }
 `
 const TagTransactions = styled.section`
-    margin-top: -68px;
+    margin-top: -70px;
     display: flex;
     flex-direction: row;
     justify-content: center;
