@@ -1,7 +1,7 @@
 import { Header } from './components/header'
 import './globals.css'
 import { Poppins } from 'next/font/google'
-
+import { Footer } from './components/footer'
 const poppins = Poppins({
   weight: ['400', '500', '700'],
   subsets: ['latin'] 
@@ -22,6 +22,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Header/>
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   )
