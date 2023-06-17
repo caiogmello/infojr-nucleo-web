@@ -6,6 +6,14 @@ import Image from "next/image"
 import carrinho from "../../../public/Carrinho.svg"
 import vendas from "../../../public/Vendas.svg"
 
+
+interface QueueProps {
+    nPessoas: number;
+    nPaes: number;
+    nEntrada: number;
+}
+
+
 const TagContainer = styled.div`
     display: flex;
     width: 395px;
@@ -104,48 +112,48 @@ const TagTransactions = styled.section`
     }
 `
 
-export function Transactions() {
+export function Transactions({nPessoas, nPaes, nEntrada}: QueueProps) {
     return (
         <TagTransactions>
-            <Pessoas/>
-            <Paes/>
-            <Entrada/>
+            <Pessoas nPessoas={nPessoas}/>
+            <Paes nPaes={nPaes}/>
+            <Entrada nEntrada={nEntrada}/>
         </TagTransactions>
     )
 }
 
-export function Pessoas() {
+export function Pessoas({nPessoas}: {nPessoas: number}) {
     return (
         <TagContainer>
             <div>
                 <h3>Pessoas na fila</h3>
                 <Image src = {pessoas} alt = "pessoas"></Image>
             </div>
-            <h1>6</h1>
+            <h1>{nPessoas}</h1>
         </TagContainer>
     )
 }
 
-export function Paes() {
+export function Paes({nPaes}: {nPaes: number}) {
     return (
         <TagContainer>
             <div>
                 <h3>Pães vendidos</h3>
                 <Image src = {carrinho} alt = "pessoas"></Image>
             </div>
-            <h1>350</h1>
+            <h1>{nPaes}</h1>
         </TagContainer>
     )
 }
 
-export function Entrada() {
+export function Entrada({nEntrada}: {nEntrada: number}) {
     return (
         <TagEntrada>
             <div>
                 <h3>Entrada</h3>
                 <Image src = {vendas} alt = "Cifrão"></Image>
             </div>
-            <h1>R$ 175,00</h1>
+            <h1>R$ {nEntrada}</h1>
         </TagEntrada>
     )
 }
