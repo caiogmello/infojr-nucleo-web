@@ -1,15 +1,29 @@
-import Image from 'next/image'
+"use client"
+
 import styles from './page.module.css'
-import styled from 'styled-components'
 import { Queue } from './components/queue'
 import { Transactions } from './components/transaction'
-import { Modal } from './components/modal'
+import { ModalComponent } from './components/modalComponent'
+import { useState } from 'react'
+
+
 export default function Home() {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function openModal() {
+      setModalIsOpen(true);
+  }
+
+  function closeModal() {
+      setModalIsOpen(false);
+  }
+
   return (
     <main className={styles.main}>
       <Transactions/>
-      <Queue/>
-      <Modal/>
+      <Queue openModal={openModal}/>
+      {modalIsOpen && <ModalComponent cancel={closeModal} send={closeModal} />}
     </main>
   )
 }

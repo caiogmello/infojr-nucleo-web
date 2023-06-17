@@ -62,7 +62,7 @@ const TagButton = styled.div`
         border: 1px solid #DB1E1E;
         color: #DB1E1E;
 `
-export function Modal(){
+export function ModalComponent({cancel, send}:{cancel: ()=> void; send: () => void}){
     return (
         <TagModal>
             <TagInput>
@@ -73,9 +73,10 @@ export function Modal(){
                 </div>
             </TagInput>
             <TagButton>
-                <button className="send">Enviar</button>
-                <button className="cancel">Cancelar</button>
+                <button className="send" onClick={send}>Enviar</button>
+                <button className="cancel" onClick={cancel}>Cancelar</button>
             </TagButton>
         </TagModal>
     )
 }
+

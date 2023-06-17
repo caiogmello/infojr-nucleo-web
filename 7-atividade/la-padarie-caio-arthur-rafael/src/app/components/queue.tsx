@@ -2,8 +2,13 @@
 
 import { styled } from "styled-components"
 import { Customer } from "./customer"
+import { ModalComponent } from "./modalComponent"
+import { useState } from "react"
+
+
+
 const TagContainer = styled.div`
-    height: 100vh;
+    height: 100%;
     gap: 25px;
     padding-top: 80px;
     width: 1235px;
@@ -23,14 +28,23 @@ const TagButton = styled.button`
     cursor: pointer;
 `
 
-export function Queue() {
-
-    return (
+export function Queue({openModal}: {openModal: () => void}) {    
+    return (    
         <TagContainer>
-            <TagButton>
+            <TagButton onClick={openModal}>
                 + Adicionar pessoa a fila
             </TagButton>
-            <Customer/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Seilá da Silva Santos" paes={10}/>
+            <Customer nome="Anna Beatriz Trípodi" paes={10}/>
+            <Customer nome="Lionel Messi" paes={18}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
+            <Customer nome="Caio Gomes de Mello" paes={90}/>
         </TagContainer>
     )
 }

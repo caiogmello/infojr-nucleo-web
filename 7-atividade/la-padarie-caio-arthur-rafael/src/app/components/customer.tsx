@@ -45,14 +45,14 @@ const TagInfo = styled.div`
     }
 `
 
-export function Customer() {
+export function Customer({nome, paes} : {nome: string; paes: number}) {
     return (
         <TagCustomer>
             <TagInfo>
-                <h1>Alexandre Shyjada Sousa</h1>
+                <h1>{nome}</h1>
                 <div>
-                    <p><b>Total de pães</b> 50 pães</p>
-                    <p><b>Total a pagar</b> R$ 25,00</p>
+                    <p><b>Total de pães</b> {paes} pães</p>
+                    <p><b>Total a pagar</b> R$ {paes*0.5}</p>
                 </div>
             </TagInfo>
             <button>
