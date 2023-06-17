@@ -6,7 +6,6 @@ import { styled } from "styled-components"
 
 
 const TagCustomer = styled.section`
-    hegiht: 77px;
     width: 100%;
     background-color: #FFF;
     border-radius: 5px;
@@ -21,6 +20,7 @@ const TagCustomer = styled.section`
         cursor: pointer;
         background-color: transparent;
     }
+
 `
 const TagInfo = styled.div`
     display: flex;
@@ -36,13 +36,19 @@ const TagInfo = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         gap: 15px;
         > p {
             font-weight: 400;
             font-size: 12px;
         }
+        @media (max-width: 800px) {
+            flex-direction: column;
+            gap: 5px;
+        }
     }
+    
+
 `
 
 export function Customer({nome, paes} : {nome: string; paes: number}) {

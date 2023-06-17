@@ -30,6 +30,23 @@ const TagContainer = styled.div`
         font-weight: 500;
         font-size: 36px;
     }
+
+    @media (max-width: 1250px) {
+       width: 250px;
+       height: 100px;
+         > h1 {
+            font-size: 28px;
+         }
+    }
+
+    @media (max-width: 800px) {
+       width: 330px;
+         > h1 {
+            padding: 10px 25px;
+            font-size: 36px;
+         }
+    }
+
 `
 
 const TagEntrada = styled.div`
@@ -58,6 +75,23 @@ const TagEntrada = styled.div`
         font-weight: 500;
         font-size: 36px;
     }
+
+    @media (max-width: 1250px) {
+       width: 250px;
+       height: 100px;
+         > h1 {
+            font-size: 28px;
+         }
+    }
+
+
+    @media (max-width: 800px) {
+       width: 330px;
+        > h1 {
+            padding: 10px 25px;
+            font-size: 36px;
+         }
+    }
 `
 const TagTransactions = styled.section`
     margin-top: -70px;
@@ -65,6 +99,9 @@ const TagTransactions = styled.section`
     flex-direction: row;
     justify-content: center;
     gap: 25px;
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 `
 
 export function Transactions() {

@@ -2,8 +2,6 @@
 
 import { styled } from "styled-components"
 import { Customer } from "./customer"
-import { ModalComponent } from "./modalComponent"
-import { useState } from "react"
 
 
 
@@ -15,6 +13,13 @@ const TagContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media (max-width: 1250px) {
+        width: 800px;
+    }
+    @media (max-width: 800px) {
+       width: 330px;
+    }
 `
 
 
