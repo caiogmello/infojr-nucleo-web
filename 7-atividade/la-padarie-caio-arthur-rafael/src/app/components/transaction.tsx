@@ -1,10 +1,12 @@
 "use client"
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { styled } from "styled-components"
 import pessoas from "../../../public/Pessoas.svg"
 import Image from "next/image"
 import carrinho from "../../../public/Carrinho.svg"
 import vendas from "../../../public/Vendas.svg"
+
 
 
 interface QueueProps {
@@ -112,15 +114,42 @@ const TagTransactions = styled.section`
     }
 `
 
-export function Transactions({nPessoas, nPaes, nEntrada}: QueueProps) {
+export function Transactions() {
+    const [queueData, setQueueData] = useState<QueueProps>({
+      nPessoas: 0,
+      nPaes: 0,
+      nEntrada: 0,
+    });
+  
+    useEffect(() => {
+      fetchData();
+    }, []);
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/row/stats');
+        const data = response.data;
+        const nPessoas = data.rowCount;
+        const nPaes = data.paesVendidos;
+        const nEntrada = nPaes * 0.5;
+  
+        setQueueData({
+          nPessoas,
+          nPaes,
+          nEntrada,
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    };
     return (
         <TagTransactions>
-            <Pessoas nPessoas={nPessoas}/>
-            <Paes nPaes={nPaes}/>
-            <Entrada nEntrada={nEntrada}/>
+          <Pessoas nPessoas={queueData.nPessoas} />
+          <Paes nPaes={queueData.nPaes} />
+          <Entrada nEntrada={queueData.nEntrada} />
         </TagTransactions>
-    )
-}
+      );
+    }
 
 export function Pessoas({nPessoas}: {nPessoas: number}) {
     return (

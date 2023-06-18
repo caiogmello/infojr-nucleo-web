@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db-postgres-lapadarie:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    container_name: "db-lapadarie"
+    restart: always
+    volumes:
+      - ./db-lapadarie:/var/lib/postgres/data
+    environment:
+      - POSTGRES_USER=pguser
+      - POSTGRES_PASSWORD=pgpassword
+
+volumes:
+  db-lapadarie:

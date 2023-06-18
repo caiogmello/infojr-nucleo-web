@@ -1,9 +1,6 @@
-"use client"
-
-import Image from "next/image"
-import Delete from "../../../public/Delete.svg"
-import { styled } from "styled-components"
-
+import Image from "next/image";
+import Delete from "../../../public/Delete.svg";
+import { styled } from "styled-components";
 
 const TagCustomer = styled.section`
     width: 100%;
@@ -20,8 +17,8 @@ const TagCustomer = styled.section`
         cursor: pointer;
         background-color: transparent;
     }
+`;
 
-`
 const TagInfo = styled.div`
     display: flex;
     flex-direction: column;
@@ -47,23 +44,25 @@ const TagInfo = styled.div`
             gap: 5px;
         }
     }
-    
+`;
 
-`
+export function Customer({ nome, paes, id, onDelete }: { nome: string; paes: number; id: number; onDelete: (id: number) => void }) {
+    const handleDelete = () => {
+        onDelete(id); // Chamar a função onDelete passando o ID do cliente
+    };
 
-export function Customer({nome, paes} : {nome: string; paes: number}) {
     return (
         <TagCustomer>
             <TagInfo>
                 <h1>{nome}</h1>
                 <div>
-                    <p><b>Total de pães</b> {paes} pães</p>
-                    <p><b>Total a pagar</b> R$ {paes*0.5}</p>
+                    <p><b>Total de pães</b> {paes}</p>
+                    <p><b>Total a pagar</b> R$ {paes * 0.5}</p>
                 </div>
             </TagInfo>
-            <button>
-                <Image src={Delete} alt="Trash button"></Image>
+            <button onClick={handleDelete}>
+                <Image src={Delete} alt="Trash button" />
             </button>
         </TagCustomer>
-    )
+    );
 }

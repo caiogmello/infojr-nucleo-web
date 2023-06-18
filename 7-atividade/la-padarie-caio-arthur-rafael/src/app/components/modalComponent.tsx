@@ -1,5 +1,5 @@
-"use client"
-import { styled } from "styled-components"
+import { styled } from "styled-components";
+import axios from "axios";
 
 const TagModal = styled.section`
     padding: 30px 30px;
@@ -16,7 +16,8 @@ const TagModal = styled.section`
         width: 330px;
         height: 457px;
     }
-`
+`;
+
 const TagInput = styled.div`
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@ const TagInput = styled.div`
             }
         }
     }
-`
+`;
 
 const TagButton = styled.div`
     display: flex;
@@ -75,27 +76,52 @@ const TagButton = styled.div`
         color: #fff;
     }
     > .cancel {
-        background-color: #fff;  
+        background-color: #fff;
         border: 1px solid #DB1E1E;
         color: #DB1E1E;
     }
-`
+`;
 
-export function ModalComponent({cancel, send}:{cancel: ()=> void; send: () => void}){
+export function ModalComponent({ cancel, send }) {
+    const handleSend = async () => {
+        const name = document.getElementById("name").value;
+        const breadQty = document.getElementById("breadQty").value;
+
+        const data = {
+            name: name,
+            breadQty: parseInt(breadQty)
+        };
+
+        try {
+            const response = await axios.post("http://localhost:3001/row/create", data);
+            console.log(response.data);
+            send(); // Chamada da função send para atualizar o componente Queue
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const handleCancel = () => {
+        cancel();
+    };
+
     return (
         <TagModal>
             <TagInput>
                 <h1>Adicionar pessoas a fila</h1>
                 <div>
-                    <input type="text" placeholder="Nome completo do cliente" />
-                    <input type="text" placeholder="Total de pães:"/>
+                    <input type="text" id="name" placeholder="Nome completo do cliente" />
+                    <input type="text" id="breadQty" placeholder="Total de pães:" />
                 </div>
             </TagInput>
             <TagButton>
-                <button className="send" onClick={send}>Enviar</button>
-                <button className="cancel" onClick={cancel}>Cancelar</button>
+                <button className="send" onClick={handleSend}>
+                    Enviar
+                </button>
+                <button className="cancel" onClick={handleCancel}>
+                    Cancelar
+                </button>
             </TagButton>
         </TagModal>
-    )
+    );
 }
-
