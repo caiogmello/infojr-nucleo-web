@@ -82,7 +82,7 @@ const TagButton = styled.div`
     }
 `;
 
-export function ModalComponent({ cancel, send }) {
+export function ModalComponent({ cancel, send }:{ cancel: () => void, send: () => void }) {
     const handleSend = async () => {
         const name = document.getElementById("name").value;
         const breadQty = document.getElementById("breadQty").value;

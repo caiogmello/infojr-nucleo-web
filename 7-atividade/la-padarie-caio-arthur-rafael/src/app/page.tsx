@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Transactions nPessoas={6} nPaes={350} nEntrada={Number((350*0.5).toFixed(2))}/>
+      <Transactions/>
       <Queue openModal={openModal}/>
       {modalIsOpen && <ModalComponent cancel={closeModal} send={closeModal} />}
     </main>
