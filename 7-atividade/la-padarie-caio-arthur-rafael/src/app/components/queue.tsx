@@ -11,6 +11,7 @@ const TagContainer = styled.div`
     width: 1235px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 
     @media (max-width: 1250px) {

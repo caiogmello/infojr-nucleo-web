@@ -1,5 +1,4 @@
-"use client"
-
+import StyledComponentsRegistry from './lib/registry'
 import { Header } from './components/header'
 import './globals.css'
 import { Poppins } from 'next/font/google'
@@ -22,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={poppins.className}>
-        <Header/>
-        {children}
-        <Footer/>
+        <StyledComponentsRegistry>
+          <Header/>
+          {children}
+          <Footer/>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
