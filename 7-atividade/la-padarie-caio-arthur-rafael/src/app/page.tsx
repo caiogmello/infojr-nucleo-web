@@ -23,7 +23,6 @@ export default function Home() {
     <main className={styles.main}>
       <Transactions/>
       <Queue openModal={openModal}/>
-      {modalIsOpen && <ModalComponent cancel={closeModal} send={closeModal} />}
     </main>
   )
 }

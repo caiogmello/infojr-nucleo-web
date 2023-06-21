@@ -3,6 +3,8 @@ import axios from "axios";
 import { styled } from "styled-components";
 import { Customer } from "./customer";
 import { ModalComponent } from "./modalComponent";
+import styles from '../page.module.css'
+
 
 const TagContainer = styled.div`
     height: 100%;
@@ -86,7 +88,11 @@ export function Queue({ openModal }: { openModal: () => void }) {
                     onDelete={handleDelete}
                 />
             ))}
-            {modalOpen && <ModalComponent cancel={closeModal} send={handleSend} />}
+            {modalOpen && 
+                <div className={styles.modalOverlay}>
+                  <ModalComponent cancel={closeModal} send={handleSend} />
+                </div>
+            }
         </TagContainer>
     );
 }
