@@ -12,6 +12,14 @@ The front-end is completely responsive and I used the Next API for the back-end,
 
 ### To try it by yourself, run this:
 
+![Untitled](assets-readme/Untitled.png)
+
+![Untitled](assets-readme/Untitled%201.png)
+
+![Untitled](assets-readme/Untitled%202.png)
+
+![Untitled](assets-readme/Untitled%203.png)
+
 ```bash
 cd 7-LaPadarie/la-padarie-caio-arthur-rafael
 rm -r prisma/migrations prisma/dev.db
@@ -27,12 +35,4 @@ npm run dev
 ```
 
 Then, access [http://localhost:3000/](http://localhost:3000/).
-
-![Untitled](assets-readme/Untitled.png)
-
-![Untitled](assets-readme/Untitled%201.png)
-
-![Untitled](assets-readme/Untitled%202.png)
-
-![Untitled](assets-readme/Untitled%203.png)
 
