@@ -8,7 +8,7 @@ Every bread costs R$ 0,50. All customers are listed on menu, and the amount of m
 
 The costumer is a model on the database, and have 4 routes, all of them accessible by buttons on the front-end.
 
-The front-end is completely responsive and I used the Next API for the back-end, with Prisma as ORM and SQLite as database.
+The front-end is completely responsive using styled-components and I used the Next API for the back-end, with Prisma as ORM and SQLite as database.
 
 
 ![Untitled](assets-readme/Untitled.png)
