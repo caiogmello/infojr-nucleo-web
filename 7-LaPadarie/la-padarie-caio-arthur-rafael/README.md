@@ -10,7 +10,6 @@ The costumer is a model on the database, and have 4 routes, all of them accessib
 
 The front-end is completely responsive and I used the Next API for the back-end, with Prisma as ORM and SQLite as database.
 
-### To try it by yourself, run this:
 
 ![Untitled](assets-readme/Untitled.png)
 
@@ -19,6 +18,8 @@ The front-end is completely responsive and I used the Next API for the back-end,
 ![Untitled](assets-readme/Untitled%202.png)
 
 ![Untitled](assets-readme/Untitled%203.png)
+
+### To try it by yourself, run this:
 
 ```bash
 cd 7-LaPadarie/la-padarie-caio-arthur-rafael
