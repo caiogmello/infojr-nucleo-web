@@ -1,8 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:# 7 - La Padarie
+# 7 - La Padarie
 
 Here I made a complete website using NextJs and TypeScript.
 
