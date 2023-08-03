@@ -23,6 +23,7 @@ The front-end is completely responsive using styled-components and I used the Ne
 
 ```bash
 cd 7-LaPadarie/la-padarie-caio-arthur-rafael
+npm install
 rm -r prisma/migrations prisma/dev.db
 npx prisma migrate dev migration init # Give a name to migration
 npm run start-api
