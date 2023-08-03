@@ -1,12 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:# 7 - La Padarie
+# 7 - La Padarie
 
 Here I made a complete website using NextJs and TypeScript.
 
-The front-end is completely responsive and I used the Next API for the back-end, with Prisma as ORM and SQLite as database.
+It's a bakery website, where customers will queue and place their order, defining their name and the amount of bread.
+
+Every bread costs R$ 0,50. All customers are listed on menu, and the amount of money and breads sold on the top. 
+
+The costumer is a model on the database, and have 4 routes, all of them accessible by buttons on the front-end.
+
+The front-end is completely responsive using styled-components and I used the Next API for the back-end, with Prisma as ORM and SQLite as database.
+
+
+![Untitled](assets-readme/Untitled.png)
+
+![Untitled](assets-readme/Untitled%201.png)
+
+![Untitled](assets-readme/Untitled%202.png)
+
+![Untitled](assets-readme/Untitled%203.png)
 
 ### To try it by yourself, run this:
 
@@ -25,12 +36,4 @@ npm run dev
 ```
 
 Then, access [http://localhost:3000/](http://localhost:3000/).
-
-![Untitled](assets-readme/Untitled.png)
-
-![Untitled](assets-readme/Untitled%201.png)
-
-![Untitled](assets-readme/Untitled%202.png)
-
-![Untitled](assets-readme/Untitled%203.png)
 
