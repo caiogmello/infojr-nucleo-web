@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 import axios from "axios";
+import { useEffect } from "react";
+import { useTransactions } from "../context";
 
 const TagModal = styled.section`
     padding: 30px 30px;
@@ -83,6 +85,8 @@ const TagButton = styled.div`
 `;
 
 export function ModalComponent({ cancel, send }:{ cancel: () => void, send: () => void }) {
+    const { setQueueData } = useTransactions();
+
     const handleSend = async () => {
         const name = document.getElementById("name").value;
         const breadQty = document.getElementById("breadQty").value;
@@ -94,7 +98,15 @@ export function ModalComponent({ cancel, send }:{ cancel: () => void, send: () =
 
         try {
             const response = await axios.post("http://localhost:3001/row/create", data);
+            const getData = await axios.get("http://localhost:3001/row/stats");
+            console.log(getData.data);
             console.log(response.data);
+            
+            setQueueData({
+                    nPessoas: getData.data.rowCount,
+                    nPaes: getData.data.paesVendidos,
+                    nEntrada: getData.data.paesVendidos * 0.5,
+                });
             send(); // Chamada da função send para atualizar o componente Queue
         } catch (error) {
             console.error(error);

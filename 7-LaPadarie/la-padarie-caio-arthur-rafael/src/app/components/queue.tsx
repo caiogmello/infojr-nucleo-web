@@ -1,9 +1,11 @@
+"use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "styled-components";
 import { Customer } from "./customer";
 import { ModalComponent } from "./modalComponent";
 import styles from '../page.module.css'
+import { useTransactions } from '../context';
 
 
 const TagContainer = styled.div`
@@ -34,6 +36,7 @@ const TagButton = styled.button`
 `;
 
 export function Queue({ openModal }: { openModal: () => void }) {
+    const { queueData, setQueueData } = useTransactions();
     const [customers, setCustomers] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -56,6 +59,9 @@ export function Queue({ openModal }: { openModal: () => void }) {
 
             if (response.status === 200) {
                 console.log('Registro deletado com sucesso');
+                const updatedQueueData = { ...queueData };
+                updatedQueueData.nPessoas--;
+                setQueueData(updatedQueueData);
                 fetchData();
             } else {
                 console.error('Erro ao deletar o registro');

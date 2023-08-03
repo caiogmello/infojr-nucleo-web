@@ -5,7 +5,7 @@ import { Queue } from './components/queue'
 import { Transactions } from './components/transaction'
 import { ModalComponent } from './components/modalComponent'
 import { useState } from 'react'
-
+import { TransactionsProvider } from './context';
 
 export default function Home() {
 
@@ -21,8 +21,10 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Transactions/>
-      <Queue openModal={openModal}/>
+      <TransactionsProvider>
+        <Transactions />
+        <Queue openModal={openModal} />
+      </TransactionsProvider>
     </main>
   )
 }

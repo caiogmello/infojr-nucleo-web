@@ -6,7 +6,7 @@ import pessoas from "../../../public/Pessoas.svg"
 import Image from "next/image"
 import carrinho from "../../../public/Carrinho.svg"
 import vendas from "../../../public/Vendas.svg"
-
+import { useTransactions } from '../context';
 
 
 interface QueueProps {
@@ -115,13 +115,7 @@ const TagTransactions = styled.section`
 `
 
 export function Transactions() {
-    const [queueData, setQueueData] = useState<QueueProps>({
-      nPessoas: 0,
-      nPaes: 0,
-      nEntrada: 0,
-    });
-  
-    useEffect(() => {
+    const { queueData, setQueueData } = useTransactions();    useEffect(() => {
       fetchData();
     }, []);
   
@@ -186,6 +180,3 @@ export function Entrada({nEntrada}: {nEntrada: number}) {
         </TagEntrada>
     )
 }
-
-
-
