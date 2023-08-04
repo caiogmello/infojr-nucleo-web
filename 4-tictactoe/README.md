@@ -11,6 +11,7 @@ A React and TypeScript made TicTacToe game. This one was the most difficult unti
 
 ```bash
 cd infojr-nucleo-web/4-tictactoe/Jogo\ da\ Velha/
+npm install
 npm run dev
 ```
 
